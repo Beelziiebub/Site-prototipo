@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 215 35% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 35% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 35% 15%;
+
+    --primary: 210 60% 22%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 25% 95%;
+    --secondary-foreground: 210 60% 22%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 15% 50%;
+
+    --accent: 199 89% 48%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 25% 90%;
+    --input: 214 25% 90%;
+    --ring: 199 89% 48%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(210 60% 22%), hsl(199 89% 48%));
+    --gradient-hero: linear-gradient(180deg, hsl(210 60% 22% / 0.92), hsl(210 60% 22% / 0.7));
+    --shadow-card: 0 4px 24px -4px hsl(210 60% 22% / 0.08);
+    --shadow-card-hover: 0 12px 32px -8px hsl(210 60% 22% / 0.15);
+    --shadow-cta: 0 8px 24px -4px hsl(199 89% 48% / 0.4);
+
+    --font-display: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  .shadow-card-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+  .shadow-cta {
+    box-shadow: var(--shadow-cta);
+  }
+}
